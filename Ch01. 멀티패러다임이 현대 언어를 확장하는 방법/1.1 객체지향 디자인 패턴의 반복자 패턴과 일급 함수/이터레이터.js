@@ -22,6 +22,7 @@
  *   throw?(e?: any): IteratorResult<T, TReturn>;
  * }
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 // ============= ArrayLike로부터 Iterator 생성하기 =============
 /**
  * lib.es5.d.td
@@ -125,7 +126,7 @@ const pow = (array) => {
 };
 const nums = [1, 2, 3];
 const powIter = pow(nums);
-console.log(powIter.next());
-console.log(powIter.next());
-console.log(powIter.next());
-console.log(powIter.next());
+console.log(powIter.next()); // { done: false, value: 1 }
+console.log(powIter.next()); // { done: false, value: 4 }
+console.log(powIter.next()); // { done: false, value: 9 }
+console.log(powIter.next()); // { done: true, value: undefined }
